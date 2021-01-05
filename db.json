@@ -1,0 +1,25 @@
+{
+  "clients": [
+    {
+      "name": "Roberto",
+      "cellphone": "2235988123",
+      "email": "email@email.com",
+      "company": "Pepe",
+      "id": 1
+    },
+    {
+      "name": "Javier",
+      "cellphone": "2235988132",
+      "email": "javier@mail.com",
+      "company": "Jose",
+      "id": 2
+    },
+    {
+      "name": "DASDASDSADSADASAS",
+      "cellphone": "asdasdasdas",
+      "email": "asdasdasdasd",
+      "company": "DALE YA FUINCIONA",
+      "id": 3
+    }
+  ]
+}

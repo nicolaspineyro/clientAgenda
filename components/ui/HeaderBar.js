@@ -3,7 +3,7 @@ import { Button } from 'react-native-paper';
 
 const HeaderBar = ({ navigation, routes }) => {
     return (
-        <Button style={{backgroundColor:'#fff'}} onPress={() => navigation.navigate('New Client')}>
+        <Button icon='plus' style={{backgroundColor:'#fff'}} onPress={() => navigation.navigate('New Client')}>
             New Client
         </Button>
     )

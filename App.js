@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
-  StyleSheet,
+  StyleSheet
 } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
+
 
 import Home from './views/Home';
 import NewClient from './views/NewClient';
@@ -19,9 +20,10 @@ const theme = {
   ...DefaultTheme
 }
 
-console.log(theme);
+
 
 const App = () => {
+
   return (
     <>
       <NavigationContainer>
@@ -39,10 +41,10 @@ const App = () => {
             component={Home}
             options={({ navigation, route }) => ({
               headerTitleAlign: 'center',
-              headerLeft: (props) => <HeaderBar
-                navigation={navigation}
-                route={route}
-              />
+              // headerLeft: (props) => <HeaderBar
+              //   navigation={navigation}
+              //   route={route}
+              // />
             })}
 
           />
