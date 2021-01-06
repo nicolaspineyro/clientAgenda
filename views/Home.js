@@ -38,9 +38,9 @@ const Home = ({ navigation, route }) => {
     }
     return (
         <>
-            {isLoading ? <ActivityIndicator size='large' /> : <View>
+            {isLoading ? <ActivityIndicator size='large' /> : <View style={globalStyles.container}>
                 <Button style={{ marginTop: '2.5%', marginHorizontal: '2.5%' }} icon='plus' onPress={() => navigation.navigate('New Client', { setClientRefresh })} >Add new client</Button>
-                {clients.length > 0 ? <Headline style={globalStyles.headline}>Clients</Headline> : <Headline style={globalStyles.headline}>There's no clients, add one!</Headline>}
+                {clients.length > 0 ? <Headline style={globalStyles.headline}>Clients</Headline> : <Headline style={globalStyles.headline}>There are no clients, add one!</Headline>}
                 <FlatList
                     data={clients}
                     keyExtractor={item => item.id.toString()}
@@ -48,7 +48,7 @@ const Home = ({ navigation, route }) => {
                         <List.Item
                             title={item.name}
                             description={item.company}
-                            onPress={() => navigation.navigate('Client Details', { item })}
+                            onPress={() => navigation.navigate('Client Details', { item, setClientRefresh })}
                         />
                     )
                     }
@@ -62,9 +62,8 @@ const Home = ({ navigation, route }) => {
 const styles = StyleSheet.create({
     fab: {
         position: 'absolute',
-        top: '150%',
-        right: 0,
-        margin: 30
+        right: '5%',
+        bottom: '5%'
     }
 })
 

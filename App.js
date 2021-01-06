@@ -39,14 +39,7 @@ const App = () => {
           <Stack.Screen
             name='Home'
             component={Home}
-            options={({ navigation, route }) => ({
-              headerTitleAlign: 'center',
-              // headerLeft: (props) => <HeaderBar
-              //   navigation={navigation}
-              //   route={route}
-              // />
-            })}
-
+            options={{ headerTitleAlign: 'center' }}
           />
           <Stack.Screen
             name='New Client'
